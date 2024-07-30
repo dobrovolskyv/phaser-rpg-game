@@ -1,0 +1,40 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "durotar.json.tmj",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "fileStates": {
+        "": {
+            "scaleInDock": 0.5
+        },
+        "durotar.json.tmj": {
+            "scale": 0.75,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 311.99999999999994,
+                "y": 459.33333333333337
+            }
+        },
+        "durotar.json.tmj#durotar": {
+            "scaleInDock": 1
+        },
+        "durotar.json.tmj#tiles": {
+            "scaleInEditor": 1
+        }
+    },
+    "last.imagePath": "/Users/vlados/Desktop/developers/learning/phaser/Warcraft/src/assets",
+    "map.lastUsedFormat": "json",
+    "openFiles": [
+        "durotar.json.tmj"
+    ],
+    "project": "rpg-course.tiled-project",
+    "recentFiles": [
+        "durotar.json.tmj"
+    ],
+    "tileset.embedInMap": true,
+    "tileset.spacing": 1
+}
