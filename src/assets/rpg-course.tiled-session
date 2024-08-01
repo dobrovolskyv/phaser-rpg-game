@@ -13,14 +13,17 @@
         },
         "durotar.json.tmj": {
             "scale": 0.75,
-            "selectedLayer": 0,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 311.99999999999994,
-                "y": 459.33333333333337
+                "x": 245.33333333333331,
+                "y": 331.3333333333333
             }
         },
         "durotar.json.tmj#durotar": {
             "scaleInDock": 1
+        },
+        "durotar.json.tmj#tiled": {
+            "scaleInDock": 1.5
         },
         "durotar.json.tmj#tiles": {
             "scaleInEditor": 1
