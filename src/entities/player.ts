@@ -3,6 +3,7 @@ import { Entity } from "./entity";
 
 export class Player extends Entity {
     textureKey: string;
+    private moveSpeed: number;
 
     constructor(scene: Phaser.Scene, x: number, y: number, texture: string) {
         super(scene, x, y, texture, SPRITES.PLAYER)
@@ -11,6 +12,10 @@ export class Player extends Entity {
         const anims = this.scene.anims
         const animsFrameRate = 9
         this.textureKey = texture
+        this.moveSpeed = 50
+        this.setSize(28,32)
+        this.setOffset(10,16)
+        this.setScale(0.8)
 
         anims.create({
             key: "down",
@@ -56,18 +61,19 @@ export class Player extends Entity {
 
         if (keys.up.isDown) {
             this.play('up', true)
-            this.setPosition(this.x, this.y - delta * 0.25)
+            this.setVelocity(0, -delta * this.moveSpeed)
         } else if (keys.down.isDown) {
             this.play('down', true)
-            this.setPosition(this.x, this.y + delta * 0.25)
+            this.setVelocity(0, delta * this.moveSpeed)
         } else if (keys.left.isDown) {
             this.play('left', true)
-            this.setPosition(this.x - delta * 0.25, this.y)
+            this.setVelocity(-delta * this.moveSpeed, 0)
         } else if (keys.right.isDown) {
             this.play('right', true)
-            this.setPosition(this.x + delta * 0.25, this.y)
+            this.setVelocity(delta * this.moveSpeed, 0)
         } else {
             this.stop()
+            this.setVelocity(0, 0)
         }
     }
 }

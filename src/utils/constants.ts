@@ -7,6 +7,10 @@ export const SIZES = {
     PLAYER: {
         WIDTH: 48,
         HEIGHT: 48
+    },
+    BOAR: {
+        WIDTH: 32,
+        HEIGHT: 32
     }
 }
 
@@ -16,5 +20,8 @@ export const LAYERS = {
 }
 
 export const SPRITES = {
-    PLAYER: 'player'
+    PLAYER: 'player',
+    BOAR: {
+        base: 'Boar'
+    }
 }

@@ -12,18 +12,18 @@
             "scaleInDock": 0.5
         },
         "durotar.json.tmj": {
-            "scale": 0.75,
+            "scale": 0.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 245.33333333333331,
-                "y": 331.3333333333333
+                "x": 657,
+                "y": 759
             }
         },
         "durotar.json.tmj#durotar": {
             "scaleInDock": 1
         },
         "durotar.json.tmj#tiled": {
-            "scaleInDock": 1.5
+            "scaleInDock": 0.75
         },
         "durotar.json.tmj#tiles": {
             "scaleInEditor": 1
