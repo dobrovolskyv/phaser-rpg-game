@@ -20,7 +20,10 @@ export const LAYERS = {
 }
 
 export const SPRITES = {
-    PLAYER: 'player',
+    PLAYER: {
+        base: 'Player',
+        fight: 'Fight'
+    },
     BOAR: {
         base: 'Boar'
     }

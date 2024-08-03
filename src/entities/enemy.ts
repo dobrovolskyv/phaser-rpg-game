@@ -67,6 +67,32 @@ export class Enemy extends Entity {
         })
     }
 
+    atack(target: Entity){
+        const time = Math.floor(this.scene.game.loop.time);
+
+        if( time % 2000 <=3){
+            target.takeDamage(10)
+        }
+    }
+
+    taleDamage(damage){
+        super.takeDamage(damage)
+
+        if (this.health <= 0){
+            this.diactivate()
+        }
+    }
+
+    diactivate() {
+        const scene = this.scene as durotar;
+        this.stopCycleTween();
+        this.setPosition(this.initialPostion.x, this.initialPostion.y);
+        this.setVisible(false);
+        this.isAlive = false;
+        this.destroy();
+        scene.killsCounter +=1;
+    }
+
     update() {
         //Расчет дистанции до пресонажа
         const player = this.player;
@@ -84,7 +110,8 @@ export class Enemy extends Entity {
             this.followToPlayer(player);
             //Начало файтинга
             if (distanceToPlayer < this.attackRange) {
-                this.setVelocity(0, 0)
+                this.setVelocity(0, 0);
+                this.atack(player);
             }
             //возвращает нас на начальную позицию
             if(distanceToPosition > this.followRange) {
